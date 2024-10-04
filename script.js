@@ -24,7 +24,7 @@ document.getElementById('taskForm').addEventListener('submit', handleTaskSubmiss
 window.addEventListener("DOMContentLoaded", fetchTasks);
 
 function fetchTasks() {
-    fetch('http://localhost:3000/tasks') 
+    fetch('https://tasklists-1ooi.onrender.com/tasks') 
         .then((response) => response.json())
     .then((tasks)=> {
         const taskList = document.getElementById("taskList");
@@ -64,7 +64,7 @@ function handleTaskSubmission(event) {
   window.addEventListener("DOMContentLoaded", fetchTasks);
   
   function fetchTasks() {
-    fetch("http://localhost:3000/tasks")
+    fetch("https://tasklists-1ooi.onrender.com/tasks")
       .then((response) => response.json())
       .then((tasks) => {
         const taskList = document.getElementById("taskList");
@@ -87,7 +87,7 @@ function handleTaskSubmission(event) {
   }
 
 function addTaskToBackend(task) {
-    fetch("http://localhost:3000/tasks", {
+    fetch("https://tasklists-1ooi.onrender.com/tasks", {
         method:"POST", 
         headers: {
             "Content-Type" : "application/json"
@@ -119,7 +119,7 @@ function addTaskToList(task) {
 
 
 function deleteTaskFromBackend(taskId, taskElement) {
-    fetch(`http://localhost:3000/tasks/${taskId}` , {
+    fetch(`https://tasklists-1ooi.onrender.com/tasks/${taskId}` , {
 
     method:"DELETE" 
     }) .then(() => {
